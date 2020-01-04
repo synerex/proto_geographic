@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pagent;
+
+option go_package="github.com/synerex/proto_geographic";
+
+
+
+// geographic data  (mainly for supply)
+message Geo
+{
+    string type = 1;
+    int32  id = 2;
+    string label = 3;
+    bytes  data = 4;
+    string options = 5;
+}
+
+
