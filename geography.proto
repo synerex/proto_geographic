@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pagent;
 
-option go_package="github.com/synerex/proto_geographic";
+option go_package="github.com/synerex/proto_geography";
 
 
 
