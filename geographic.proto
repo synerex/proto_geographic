@@ -30,4 +30,28 @@ message Lines
     repeated int32 color = 3; // only top 3 is used
 }
 
+message Point
+{
+    float lat = 1;
+    float lon = 2;
+}
+
+message Path
+{
+    repeated Point points = 1;
+    int32 width = 2;
+    repeated int32 color = 3; // only top 3 is used
+}
+
+message Paths
+{
+    repeated Path paths = 1;
+}
+
+message Scatter
+{
+    repeated Point points = 1;
+    repeated int32 radiuses = 2;
+    repeated int32 color = 3;
+}
 
