@@ -19,8 +19,8 @@ message Geo
 
 message Line
 {
-    repeated float from = 1;
-    repeated float to = 2;
+    repeated double from = 1;
+    repeated double to = 2;
 }
 
 message Lines
@@ -32,8 +32,8 @@ message Lines
 
 message Point
 {
-    float lat = 1;
-    float lon = 2;
+    double lat = 1;
+    double lon = 2;
 }
 
 message Path

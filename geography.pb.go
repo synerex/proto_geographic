@@ -34,7 +34,7 @@ func (m *Geo) Reset()         { *m = Geo{} }
 func (m *Geo) String() string { return proto.CompactTextString(m) }
 func (*Geo) ProtoMessage()    {}
 func (*Geo) Descriptor() ([]byte, []int) {
-	return fileDescriptor_geography_d0eacdc26cee3668, []int{0}
+	return fileDescriptor_geography_f1e4260edc4f5e31, []int{0}
 }
 func (m *Geo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Geo.Unmarshal(m, b)
@@ -90,8 +90,8 @@ func (m *Geo) GetOptions() string {
 }
 
 type Line struct {
-	From                 []float32 `protobuf:"fixed32,1,rep,packed,name=from,proto3" json:"from,omitempty"`
-	To                   []float32 `protobuf:"fixed32,2,rep,packed,name=to,proto3" json:"to,omitempty"`
+	From                 []float64 `protobuf:"fixed64,1,rep,packed,name=from,proto3" json:"from,omitempty"`
+	To                   []float64 `protobuf:"fixed64,2,rep,packed,name=to,proto3" json:"to,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
 	XXX_unrecognized     []byte    `json:"-"`
 	XXX_sizecache        int32     `json:"-"`
@@ -101,7 +101,7 @@ func (m *Line) Reset()         { *m = Line{} }
 func (m *Line) String() string { return proto.CompactTextString(m) }
 func (*Line) ProtoMessage()    {}
 func (*Line) Descriptor() ([]byte, []int) {
-	return fileDescriptor_geography_d0eacdc26cee3668, []int{1}
+	return fileDescriptor_geography_f1e4260edc4f5e31, []int{1}
 }
 func (m *Line) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Line.Unmarshal(m, b)
@@ -121,14 +121,14 @@ func (m *Line) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Line proto.InternalMessageInfo
 
-func (m *Line) GetFrom() []float32 {
+func (m *Line) GetFrom() []float64 {
 	if m != nil {
 		return m.From
 	}
 	return nil
 }
 
-func (m *Line) GetTo() []float32 {
+func (m *Line) GetTo() []float64 {
 	if m != nil {
 		return m.To
 	}
@@ -148,7 +148,7 @@ func (m *Lines) Reset()         { *m = Lines{} }
 func (m *Lines) String() string { return proto.CompactTextString(m) }
 func (*Lines) ProtoMessage()    {}
 func (*Lines) Descriptor() ([]byte, []int) {
-	return fileDescriptor_geography_d0eacdc26cee3668, []int{2}
+	return fileDescriptor_geography_f1e4260edc4f5e31, []int{2}
 }
 func (m *Lines) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Lines.Unmarshal(m, b)
@@ -190,8 +190,8 @@ func (m *Lines) GetColor() []int32 {
 }
 
 type Point struct {
-	Lat                  float32  `protobuf:"fixed32,1,opt,name=lat,proto3" json:"lat,omitempty"`
-	Lon                  float32  `protobuf:"fixed32,2,opt,name=lon,proto3" json:"lon,omitempty"`
+	Lat                  float64  `protobuf:"fixed64,1,opt,name=lat,proto3" json:"lat,omitempty"`
+	Lon                  float64  `protobuf:"fixed64,2,opt,name=lon,proto3" json:"lon,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -201,7 +201,7 @@ func (m *Point) Reset()         { *m = Point{} }
 func (m *Point) String() string { return proto.CompactTextString(m) }
 func (*Point) ProtoMessage()    {}
 func (*Point) Descriptor() ([]byte, []int) {
-	return fileDescriptor_geography_d0eacdc26cee3668, []int{3}
+	return fileDescriptor_geography_f1e4260edc4f5e31, []int{3}
 }
 func (m *Point) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Point.Unmarshal(m, b)
@@ -221,14 +221,14 @@ func (m *Point) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Point proto.InternalMessageInfo
 
-func (m *Point) GetLat() float32 {
+func (m *Point) GetLat() float64 {
 	if m != nil {
 		return m.Lat
 	}
 	return 0
 }
 
-func (m *Point) GetLon() float32 {
+func (m *Point) GetLon() float64 {
 	if m != nil {
 		return m.Lon
 	}
@@ -248,7 +248,7 @@ func (m *Path) Reset()         { *m = Path{} }
 func (m *Path) String() string { return proto.CompactTextString(m) }
 func (*Path) ProtoMessage()    {}
 func (*Path) Descriptor() ([]byte, []int) {
-	return fileDescriptor_geography_d0eacdc26cee3668, []int{4}
+	return fileDescriptor_geography_f1e4260edc4f5e31, []int{4}
 }
 func (m *Path) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Path.Unmarshal(m, b)
@@ -300,7 +300,7 @@ func (m *Paths) Reset()         { *m = Paths{} }
 func (m *Paths) String() string { return proto.CompactTextString(m) }
 func (*Paths) ProtoMessage()    {}
 func (*Paths) Descriptor() ([]byte, []int) {
-	return fileDescriptor_geography_d0eacdc26cee3668, []int{5}
+	return fileDescriptor_geography_f1e4260edc4f5e31, []int{5}
 }
 func (m *Paths) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Paths.Unmarshal(m, b)
@@ -340,7 +340,7 @@ func (m *Scatter) Reset()         { *m = Scatter{} }
 func (m *Scatter) String() string { return proto.CompactTextString(m) }
 func (*Scatter) ProtoMessage()    {}
 func (*Scatter) Descriptor() ([]byte, []int) {
-	return fileDescriptor_geography_d0eacdc26cee3668, []int{6}
+	return fileDescriptor_geography_f1e4260edc4f5e31, []int{6}
 }
 func (m *Scatter) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Scatter.Unmarshal(m, b)
@@ -391,9 +391,9 @@ func init() {
 	proto.RegisterType((*Scatter)(nil), "pagent.Scatter")
 }
 
-func init() { proto.RegisterFile("geography.proto", fileDescriptor_geography_d0eacdc26cee3668) }
+func init() { proto.RegisterFile("geography.proto", fileDescriptor_geography_f1e4260edc4f5e31) }
 
-var fileDescriptor_geography_d0eacdc26cee3668 = []byte{
+var fileDescriptor_geography_f1e4260edc4f5e31 = []byte{
 	// 331 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x52, 0x4f, 0x4b, 0xeb, 0x40,
 	0x10, 0x27, 0xff, 0xda, 0xf7, 0xe6, 0xf5, 0xbd, 0x27, 0x8b, 0x87, 0xc5, 0x53, 0x58, 0x14, 0x82,
@@ -404,16 +404,16 @@ var fileDescriptor_geography_d0eacdc26cee3668 = []byte{
 	0xe5, 0x51, 0xf1, 0x5b, 0x33, 0x16, 0xff, 0x20, 0x76, 0xb5, 0x8c, 0xf3, 0xa8, 0xc8, 0x74, 0xec,
 	0x6a, 0x71, 0x0a, 0x59, 0x67, 0x2a, 0xdb, 0xc9, 0x84, 0x43, 0x13, 0x09, 0x93, 0xb5, 0x21, 0x23,
 	0xd3, 0x3c, 0x2a, 0x16, 0x9a, 0xb1, 0x90, 0x30, 0xc7, 0x81, 0x1c, 0xf6, 0xa3, 0xcc, 0x38, 0x7b,
-	0xa0, 0xea, 0x12, 0xd2, 0x7b, 0xd7, 0xdb, 0x30, 0xf5, 0xea, 0x71, 0x23, 0xa3, 0x3c, 0x29, 0x62,
+	0xa0, 0xea, 0x12, 0xd2, 0x7b, 0xd7, 0xdb, 0x30, 0xf5, 0xea, 0x71, 0x23, 0xa3, 0x3c, 0x29, 0x22,
 	0xcd, 0x38, 0x7c, 0x8f, 0x50, 0xc6, 0xac, 0xc4, 0x84, 0xea, 0x11, 0xb2, 0x90, 0x1d, 0x85, 0x82,
 	0xac, 0x0b, 0x80, 0xd3, 0x7f, 0xae, 0x17, 0xe5, 0xd4, 0xbd, 0x0c, 0xae, 0x9e, 0xac, 0x50, 0xee,
 	0xcd, 0xd5, 0xd4, 0xee, 0xfb, 0x4e, 0x24, 0xa8, 0x6b, 0xec, 0xd0, 0xcb, 0x24, 0x4f, 0x82, 0xca,
-	0x44, 0x5d, 0x41, 0xb6, 0x42, 0xd7, 0x93, 0x38, 0x81, 0xa4, 0x33, 0xc4, 0x4b, 0xc7, 0x3a, 0x40,
+	0x44, 0x5d, 0x41, 0xb6, 0x42, 0xd7, 0x93, 0x38, 0x81, 0xa4, 0x33, 0xc4, 0x4b, 0x47, 0x3a, 0x40,
 	0x56, 0xb0, 0xe7, 0x47, 0x82, 0x82, 0xbd, 0x7a, 0x82, 0x74, 0x65, 0xa8, 0x15, 0x17, 0x30, 0x1b,
 	0xc2, 0xd0, 0xa1, 0xc5, 0xdf, 0x43, 0x0b, 0x7e, 0x4a, 0xef, 0xcd, 0x1f, 0xf7, 0x30, 0xd4, 0xf2,
 	0x82, 0x43, 0x00, 0x9f, 0x17, 0x0c, 0xae, 0x9e, 0x2c, 0x55, 0xc1, 0xfc, 0x61, 0x6d, 0x88, 0xac,
 	0xff, 0x6e, 0x95, 0x33, 0xf8, 0xe5, 0x4d, 0xed, 0xb6, 0xa3, 0x1d, 0xf9, 0xaf, 0x66, 0xfa, 0xc8,
 	0xbf, 0x2e, 0x74, 0x7b, 0xfe, 0xac, 0x1a, 0x47, 0xed, 0xb6, 0x2a, 0xd7, 0xb8, 0x59, 0x8e, 0xbb,
 	0xde, 0x7a, 0xfb, 0xbe, 0xe4, 0x83, 0x79, 0x39, 0x1e, 0x50, 0x35, 0x63, 0xe1, 0xe6, 0x23, 0x00,
-	0x00, 0xff, 0xff, 0x7c, 0xf3, 0xdd, 0xb5, 0x54, 0x02, 0x00, 0x00,
+	0x00, 0xff, 0xff, 0x84, 0xee, 0x36, 0x65, 0x54, 0x02, 0x00, 0x00,
 }
