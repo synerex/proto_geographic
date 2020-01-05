@@ -25,7 +25,7 @@ message Line
 
 message Lines
 {
-    repeated Lines lines = 1;
+    repeated Line lines = 1;
     int32 width = 2;
     repeated int32 color = 3; // only top 3 is used
 }
