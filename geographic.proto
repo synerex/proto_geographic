@@ -9,11 +9,25 @@ option go_package="github.com/synerex/proto_geographic";
 // geographic data  (mainly for supply)
 message Geo
 {
-    string type = 1;
+    string type = 1;        // may contain 
     int32  id = 2;
     string label = 3;
     bytes  data = 4;
     string options = 5;
+}
+
+
+message Line
+{
+    repeated float from = 1;
+    repeated float to = 2;
+}
+
+message Lines
+{
+    repeated Lines lines = 1;
+    int32 width = 2;
+    repeated int32 color = 3; // only top 3 is used
 }
 
 
