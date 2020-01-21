@@ -55,3 +55,10 @@ message Scatter
     repeated int32 color = 3;
 }
 
+message ViewState
+{
+    double lat = 1;
+    double lon = 2;
+    int32 zoom = 3;     
+    double pitch = 4;
+}
