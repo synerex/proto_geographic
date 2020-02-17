@@ -4,7 +4,7 @@ package pagent;
 
 option go_package="github.com/synerex/proto_geography";
 
-
+import "google/protobuf/timestamp.proto";
 
 // geographic data  (mainly for supply)
 message Geo
@@ -15,7 +15,6 @@ message Geo
     bytes  data = 4;
     string options = 5;
 }
-
 
 message Line
 {
@@ -61,4 +60,34 @@ message ViewState
     double lon = 2;
     int32 zoom = 3;     
     double pitch = 4;
+}
+
+
+// for BarGraph type
+enum BarType {
+    BT_BOX_FIXCOLOR = 0;
+    BT_BOX_VARCOLOR = 1;
+    BT_HEX_FIXCOLOR = 2;
+    BT_HEX_VARCOLOR = 3;
+}
+
+message BarGraph
+{
+    int32 id = 1;
+    google.protobuf.Timestamp ts = 2;
+    BarType type = 3;
+    int32 color = 4;
+    double lat = 5;
+    double lon = 6;
+    double width = 7;
+    double radius = 8;
+    double value = 9;
+    double min = 10;
+    double max = 11;
+    string text = 12; 
+}
+
+message BarGraphs
+{
+    repeated BarGraphs bars = 1;
 }
