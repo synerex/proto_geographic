@@ -71,23 +71,29 @@ enum BarType {
     BT_HEX_VARCOLOR = 3;
 }
 
+message BarData {
+    string label = 1;
+    int32 color = 3;
+    double value = 2;
+}
+
 message BarGraph
 {
     int32 id = 1;
     google.protobuf.Timestamp ts = 2;
-    BarType type = 3;
-    int32 color = 4;
-    double lat = 5;
-    double lon = 6;
-    double width = 7;
-    double radius = 8;
-    double value = 9;
-    double min = 10;
-    double max = 11;
-    string text = 12; 
+    double lat = 4;
+    double lon = 5;
+    int32 areaColor = 3;
+    double radius = 6;
+    repeated BarData barData = 7;
+    string text = 8;
 }
 
 message BarGraphs
 {
-    repeated BarGraphs bars = 1;
+    repeated BarGraph bars = 1;
+    double barWidth = 2;
+    BarType type = 3;
+    double min = 4;
+    double max = 5;
 }
