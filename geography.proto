@@ -81,19 +81,20 @@ message BarGraph
 {
     int32 id = 1;
     google.protobuf.Timestamp ts = 2;
-    double lat = 4;
-    double lon = 5;
-    int32 areaColor = 3;
-    double radius = 6;
-    repeated BarData barData = 7;
-    string text = 8;
+    BarType type = 3;
+    int32 color = 4;
+    double lat = 5;
+    double lon = 6;
+    double width = 7;
+    double radius = 8;
+    double min = 9;
+    double max = 10;
+    int32 areaColor = 11;
+    repeated BarData barData = 12;
+    string text = 13; 
 }
 
 message BarGraphs
 {
     repeated BarGraph bars = 1;
-    double barWidth = 2;
-    BarType type = 3;
-    double min = 4;
-    double max = 5;
 }
