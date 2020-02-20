@@ -71,6 +71,12 @@ enum BarType {
     BT_HEX_VARCOLOR = 3;
 }
 
+message BarData {
+    string label = 1;
+    int32 color = 3;
+    double value = 2;
+}
+
 message BarGraph
 {
     int32 id = 1;
@@ -81,13 +87,14 @@ message BarGraph
     double lon = 6;
     double width = 7;
     double radius = 8;
-    double value = 9;
-    double min = 10;
-    double max = 11;
-    string text = 12; 
+    double min = 9;
+    double max = 10;
+    int32 areaColor = 11;
+    repeated BarData barData = 12;
+    string text = 13; 
 }
 
 message BarGraphs
 {
-    repeated BarGraphs bars = 1;
+    repeated BarGraph bars = 1;
 }
