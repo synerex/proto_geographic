@@ -64,11 +64,14 @@ message ViewState
 
 
 // for BarGraph type
-enum BarType {
-    BT_BOX_FIXCOLOR = 0;
-    BT_BOX_VARCOLOR = 1;
-    BT_HEX_FIXCOLOR = 2;
-    BT_HEX_VARCOLOR = 3;
+enum BarColorType {
+    FIXCOLOR = 0;
+    VARCOLOR = 1;
+}
+
+enum BarShapeType {
+    BOX = 0;
+    HEX = 1;
 }
 
 message BarData {
@@ -81,17 +84,18 @@ message BarGraph
 {
     int32 id = 1;
     google.protobuf.Timestamp ts = 2;
-    BarType type = 3;
-    int32 color = 4;
-    double lat = 5;
-    double lon = 6;
-    double width = 7;
-    double radius = 8;
-    double min = 9;
-    double max = 10;
-    int32 areaColor = 11;
-    repeated BarData barData = 12;
-    string text = 13; 
+    BarShapeType shapeType = 3;
+    BarColorType colorType = 4;
+    int32 color = 5;
+    double lat = 6;
+    double lon = 7;
+    double width = 8;
+    double radius = 9;
+    double min = 10;
+    double max = 11;
+    int32 areaColor = 12;
+    repeated BarData barData = 13;
+    string text = 14; 
 }
 
 message BarGraphs
