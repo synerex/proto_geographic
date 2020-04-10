@@ -62,6 +62,20 @@ message ViewState
     double pitch = 4;
 }
 
+message Bearing
+{
+    double bearing = 1;
+}
+
+message Pitch
+{
+    double pitch = 1;
+}
+
+message ClearMoves
+{
+    string message = 1;
+}
 
 // for BarGraph type
 enum BarType {
