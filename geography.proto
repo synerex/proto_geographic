@@ -47,11 +47,23 @@ message Paths
     repeated Path paths = 1;
 }
 
-message Scatter
+message Arcs  // message for ArcLayer on HarmoVIS
+{
+    repeated Point srcs = 1;
+    repeated Point tgts = 2;
+    repeated int32 srcCols = 3;
+    repeated int32 tgtCols = 4;
+    repeated int32 tilts = 5;  // may no tilts
+}
+
+message Scatters // message for ScatterPlotLayer on HarmoVIS
 {
     repeated Point points = 1;
     repeated int32 radiuses = 2;
-    repeated int32 color = 3;
+    repeated int32 fillColors = 3; // 0xXXXXXX style color 
+    repeated int32 lineColors = 4;
+    int32 lineWidth = 5;
+    int32 fillAlpha = 6; // if minus , no fill.
 }
 
 message ViewState
