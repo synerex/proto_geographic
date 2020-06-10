@@ -66,6 +66,12 @@ message Scatters // message for ScatterPlotLayer on HarmoVIS
     int32 fillAlpha = 6; // if minus , no fill.
 }
 
+message TopTextLabel // text label for HarmoVIS
+{
+    string label = 1;  // text for label
+    string style = 2;  // style sheet json for label        
+}
+
 message ViewState
 {
     double lat = 1;
