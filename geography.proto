@@ -95,6 +95,16 @@ message ClearMoves
     string message = 1;
 }
 
+message ClearScatters
+{
+    string message = 1;
+}
+
+message ClearArcs
+{
+    string message = 1;
+}
+
 // for BarGraph type
 enum BarColorType {
     FIXCOLOR = 0;
