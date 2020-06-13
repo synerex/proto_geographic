@@ -76,18 +76,21 @@ message ViewState
 {
     double lat = 1;
     double lon = 2;
-    int32 zoom = 3;     
+    double zoom = 3;     
     double pitch = 4;
+    double duration = 5; // for animation (animation time in sec)
 }
 
 message Bearing
 {
     double bearing = 1;
+    double duration = 2; // for animation (animation time in sec)
 }
 
 message Pitch
 {
     double pitch = 1;
+    double duration = 2; // for animation (animation time in sec)
 }
 
 message ClearMoves
