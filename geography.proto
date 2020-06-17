@@ -147,3 +147,9 @@ message BarGraphs
 {
     repeated BarGraph bars = 1;
 }
+
+
+message HarmoVIS // options for HarmoVIS control
+{   
+    string confJson = 1; // json string
+}
